@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Traffinity</title>
+  <style>
+    /* Grey theme */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #d9d9d9;
+      color: #111;
+    }
+
+    nav {
+      background: #555;
+      padding: 14px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 22px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .page {
+      padding: 34px;
+      display: none;
+      background: #e0e0e0;
+      margin: 20px auto;
+      border-radius: 12px;
+      max-width: 900px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .page h1, .page h2 {
+      margin-bottom: 12px;
+    }
+
+    .page p {
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    #contact ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      background: #f2f2f2;
+    }
+
+    table, th, td {
+      border: 1px solid #999;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background: #777;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#business">Business</a></li>
+        <li><a href="#method">Scientific Methodology</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="intro" class="page">
+    <h1>Traffinity</h1>
+    <p>Smart traffic system that reduces congestion, air pollution, waiting time, and improves emergency response.</p>
+    <table>
+      <tr>
+        <th>System used</th>
+        <th>Final Results</th>
+      </tr>
+      <tr>
+        <td>Traditional system</td>
+        <td>High and longer trip time.<br>Longer waiting time.<br>Slow emergency response.<br>High greenhouse gas emissions.<br>Fixed cycles with the traffic light.</td>
+      </tr>
+      <tr>
+        <td>SMART system</td>
+        <td>Shorter trip time.<br>Shorter waiting time.<br>Fast Emergency response.<br>Low greenhouse gas emissions.<br>Dynamic (priority) with the traffic light.</td>
+      </tr>
+    </table>
+  </section>
+
+  <section id="business" class="page">
+    <h2>Business</h2>
+    <p>Our system uses sensors, AI, and IoT to improve traffic flow and reduce wasted fuel. It offers adaptive traffic timing and alternative routes. The model reduces waiting time by 71% and improves flow efficiency by 36%.</p>
+    <img src="D:\G12\Capstone\Website\Pictures\Picture1.png" alt="Business Image 1">
+    <img src="D:\G12\Capstone\Website\Pictures\Picture2.png" alt="Business Image 2">
+  </section>
+
+  <section id="method" class="page">
+    <h2>Scientific Methodology</h2>
+    <p>Our system uses a combination of AI, IoT, and sensor networks to manage traffic efficiently. The central hub, an ESP32 microcontroller, processes real-time data from ultrasonic sensors, ESP32 CAM modules, MQ135 gas sensors, and LDR sensors.</p>
+    <p>The ESP32 CAM captures live traffic images and uses a lightweight YOLO model to detect vehicle types and congestion levels. Ultrasonic sensors measure vehicle distance and density, while MQ135 sensors monitor CO₂ levels, ensuring environmental monitoring. Emergency lanes remain closed until congestion rises or emergency alerts are triggered.</p>
+    <p>Day/night conditions are handled with LDR sensors, and LCD displays dynamically show traffic directions. Servo motors operate barriers to divert traffic when needed. Automated test vehicles simulate real traffic, using ultrasonic sensors and servo-driven obstacle avoidance.</p>
+    <p>The system has proven to reduce waiting time by 71.43%, lower traffic density and air pollution (from 60 ppm to 12 ppm), and improve trip flow efficiency by 36%.</p>
+    <p><strong>Key Components:</strong></p>
+    <ul>
+    <li>ESP32 Central Hub</li>
+    <li>ESP32 CAM for real-time monitoring</li>
+    <li>MQ135 Gas Sensor for pollution detection</li>
+    <li>Ultrasonic Sensors for vehicle detection</li>
+    <li>LDR Sensors for day/night detection</li>
+    <li>SG90 Servo Motors for traffic barriers</li>
+    <li>LCD Display for driver messages</li>
+    </ul>
+    <p><strong>Testing & Results:</strong></p>
+    <ul>
+    <li>Prototype tested across low, medium, and high traffic phases</li>
+    <li>Collected data on trip time, waiting time, and fuel consumption</li>
+    <li>AI analysis confirms reduced trip time and greenhouse gas emissions by ~65%</li>
+    </ul>
+    <p>Overall, Traffinity provides predictive traffic management, immediate emergency response, and environmental monitoring, offering a safer and more efficient transportation system compared to traditional methods.</p>
+  </section>
+
+  <section id="contact" class="page">
+    <h2>Contact Us</h2>
+    <p>Email us:</p>
+    <ul>
+      <li>abdallah.1523024@stemoctober2.moe.edu.eg</li>
+      <li>abdelrahman.2223035@stemoctober2.moe.edu.eg</li>
+      <li>mazen.2923069@stemoctober2.moe.edu.eg</li>
+    </ul>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
