@@ -5,161 +5,157 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Traffinity</title>
   <style>
-    /* Grey theme */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
+/* Metallic Tech Grey Theme */
 
-    body {
-      background: #d9d9d9;
-      color: #111;
-    }
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
 
-    nav {
-      background: #555;
-      padding: 14px;
-    }
+body {
+  background: linear-gradient(135deg, #b5b5b5, #d6d6d6);
+  color: #111;
+  width: 100%; min-height: 100vh; background-attachment: fixed;
+}
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 22px;
-    }
+header {
+  width: 100%; background: #3d3d3d; padding: 18px 0;
+  border-bottom: 4px solid #1f1f1f; box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 17px;
-    }
+nav ul { list-style: none; display: flex; justify-content: center; gap: 40px; }
 
-    .page {
-      padding: 34px;
-      display: none;
-      background: #e0e0e0;
-      margin: 20px auto;
-      border-radius: 12px;
-      max-width: 900px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
+nav a {
+  color: #eee; text-decoration: none; font-size: 19px;
+  padding: 6px 14px; transition: 0.3s; letter-spacing: 0.5px;
+}
 
-    .page h1, .page h2 {
-      margin-bottom: 12px;
-    }
+nav a:hover {
+  background: #5a5a5a; border-radius: 6px; box-shadow: inset 0 0 6px #000;
+}
 
-    .page p {
-      margin-bottom: 10px;
-      line-height: 1.5;
-    }
+.wrapper {
+  width: 100%; display: flex; justify-content: center; padding: 35px 0;
+}
 
-    #contact ul {
-      margin-top: 10px;
-      padding-left: 20px;
-    }
+.page {
+  width: 95%; max-width: 1200px; background: #e8e8e8;
+  padding: 32px; border-radius: 8px; margin-bottom: 35px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.35), inset 0 0 12px rgba(255,255,255,0.5);
+  border: 1px solid #b3b3b3; display: none; transition: 0.3s;
+}
 
-    img {
-      width: 100%;
-      max-width: 400px;
-      border-radius: 10px;
-      margin-top: 15px;
-      margin-bottom: 15px;
-    }
+.page h1, .page h2 {
+  margin-bottom: 20px; color: #1a1a1a;
+  border-left: 6px solid #444; padding-left: 12px;
+  text-transform: uppercase;
+}
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 15px;
-      margin-bottom: 15px;
-      background: #f2f2f2;
-    }
+.page p { line-height: 1.55; margin-bottom: 12px; }
 
-    table, th, td {
-      border: 1px solid #999;
-    }
+/* Tables */
 
-    th, td {
-      padding: 12px;
-      text-align: left;
-    }
+table {
+  width: 100%; border-collapse: collapse; margin-top: 20px;
+  background: #f2f2f2; border-radius: 6px; overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+}
 
-    th {
-      background: #777;
-      color: white;
-    }
+th, td { border: 1px solid #aaa; padding: 14px; text-align: left; }
+th {
+  background: #5a5a5a; color: white; text-transform: uppercase; letter-spacing: 0.7px;
+}
+tr:nth-child(even) { background: #dddddd; }
 
-    tr:nth-child(even) {
-      background: #ddd;
-    }
+ul { margin-top: 12px; padding-left: 24px; }
+
+/* Images */
+
+img {
+  width: 100%; max-width: 480px; border-radius: 6px;
+  margin: 18px 0; box-shadow: 0 3px 14px rgba(0,0,0,0.35);
+  border: 1px solid #6e6e6e; transition: 0.3s;
+}
+
+img:hover { transform: scale(1.03); box-shadow: 0 6px 18px rgba(0,0,0,0.45); }
+
+.page.active { display: block; animation: fadeIn 0.4s ease-in-out; }
+
+@keyframes fadeIn { from { opacity:0; transform: translateY(10px);} to {opacity:1; transform:translateY(0);} }
+
+.caption { font-weight:bold; margin-bottom:20px; }
   </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#intro">Introduction</a></li>
-        <li><a href="#business">Business</a></li>
-        <li><a href="#method">Scientific Methodology</a></li>
-        <li><a href="#contact">Contact Us</a></li>
-      </ul>
-    </nav>
-  </header>
+
+<header>
+  <nav>
+    <ul>
+      <li><a href="#intro">Introduction</a></li>
+      <li><a href="#business">Business</a></li>
+      <li><a href="#method">Scientific Methodology</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="wrapper">
 
   <section id="intro" class="page">
     <h1>Traffinity</h1>
-    <p>Smart traffic system that reduces congestion, air pollution, waiting time, and improves emergency response.</p>
+    <p>Smart traffic system that reduces congestion, emissions, and waiting time. It detects emergencies, manages lane priority, and improves trip flow.</p>
+
     <table>
-      <tr>
-        <th>System used</th>
-        <th>Final Results</th>
-      </tr>
-      <tr>
-        <td>Traditional system</td>
-        <td>High and longer trip time.<br>Longer waiting time.<br>Slow emergency response.<br>High greenhouse gas emissions.<br>Fixed cycles with the traffic light.</td>
-      </tr>
-      <tr>
-        <td>SMART system</td>
-        <td>Shorter trip time.<br>Shorter waiting time.<br>Fast Emergency response.<br>Low greenhouse gas emissions.<br>Dynamic (priority) with the traffic light.</td>
-      </tr>
+      <tr><th>System</th><th>Results</th></tr>
+      <tr><td>Traditional System</td><td>High trip time, slow emergency response, high emissions, fixed cycles.</td></tr>
+      <tr><td>Smart System</td><td>Reduced trip time, faster response, lower emissions, dynamic priority.</td></tr>
     </table>
+
+    <img src="D:/G12/Capstone/Website/Pictures/Picture3.png" alt="Fatalities in Egypt">
+    <p class="caption">Fatalities in Egypt</p>
   </section>
 
   <section id="business" class="page">
     <h2>Business</h2>
-    <p>Our system uses sensors, AI, and IoT to improve traffic flow and reduce wasted fuel. It offers adaptive traffic timing and alternative routes. The model reduces waiting time by 71% and improves flow efficiency by 36%.</p>
-    <img src="D:\G12\Capstone\Website\Pictures\Picture1.png" alt="Business Image 1">
-    <img src="D:\G12\Capstone\Website\Pictures\Picture2.png" alt="Business Image 2">
+    <p>The system uses sensors, AI, and IoT to improve traffic efficiency. It reduces waiting time by 71% and increases trip flow by 36%.</p>
+
+    <img src="D:/G12/Capstone/Website/Pictures/Picture1.png" alt="Automated Car">
+    <p class="caption">Automated Car</p>
+
+    <img src="D:/G12/Capstone/Website/Pictures/Picture2.png" alt="Overall Design">
+    <p class="caption">Overall Design</p>
   </section>
 
   <section id="method" class="page">
     <h2>Scientific Methodology</h2>
-    <p>Our system uses a combination of AI, IoT, and sensor networks to manage traffic efficiently. The central hub, an ESP32 microcontroller, processes real-time data from ultrasonic sensors, ESP32 CAM modules, MQ135 gas sensors, and LDR sensors.</p>
-    <p>The ESP32 CAM captures live traffic images and uses a lightweight YOLO model to detect vehicle types and congestion levels. Ultrasonic sensors measure vehicle distance and density, while MQ135 sensors monitor CO₂ levels, ensuring environmental monitoring. Emergency lanes remain closed until congestion rises or emergency alerts are triggered.</p>
-    <p>Day/night conditions are handled with LDR sensors, and LCD displays dynamically show traffic directions. Servo motors operate barriers to divert traffic when needed. Automated test vehicles simulate real traffic, using ultrasonic sensors and servo-driven obstacle avoidance.</p>
-    <p>The system has proven to reduce waiting time by 71.43%, lower traffic density and air pollution (from 60 ppm to 12 ppm), and improve trip flow efficiency by 36%.</p>
+    <p>The ESP32 Central Hub collects ultrasonic, gas, LDR, and camera data. YOLO detection identifies cars and trucks. Barriers and lanes adjust automatically.</p>
+
     <p><strong>Key Components:</strong></p>
     <ul>
-    <li>ESP32 Central Hub</li>
-    <li>ESP32 CAM for real-time monitoring</li>
-    <li>MQ135 Gas Sensor for pollution detection</li>
-    <li>Ultrasonic Sensors for vehicle detection</li>
-    <li>LDR Sensors for day/night detection</li>
-    <li>SG90 Servo Motors for traffic barriers</li>
-    <li>LCD Display for driver messages</li>
+      <li>ESP32 Central Hub</li>
+      <li>ESP32 CAM</li>
+      <li>MQ135 Gas Sensor</li>
+      <li>Ultrasonic Sensors</li>
+      <li>LDR Sensors</li>
+      <li>SG90 Servo Motors</li>
+      <li>LCD Display</li>
     </ul>
-    <p><strong>Testing & Results:</strong></p>
+
+    <p><strong>Testing:</strong></p>
     <ul>
-    <li>Prototype tested across low, medium, and high traffic phases</li>
-    <li>Collected data on trip time, waiting time, and fuel consumption</li>
-    <li>AI analysis confirms reduced trip time and greenhouse gas emissions by ~65%</li>
+      <li>Low, medium, and high traffic phases</li>
+      <li>Trip time, waiting time, fuel consumption</li>
+      <li>AI detection accuracy and pollution readings</li>
     </ul>
-    <p>Overall, Traffinity provides predictive traffic management, immediate emergency response, and environmental monitoring, offering a safer and more efficient transportation system compared to traditional methods.</p>
+
+    <img src="D:/G12/Capstone/Website/Pictures/Picture4.png" alt="Average Trip Time">
+    <p class="caption">Average Trip Time</p>
+
+    <img src="D:/G12/Capstone/Website/Pictures/Picture5.png" alt="Average CO2 Emission">
+    <p class="caption">Average CO2 Emission</p>
+
+    <p>Results show strong reductions in pollution, waiting time, and fuel use.</p>
   </section>
 
   <section id="contact" class="page">
     <h2>Contact Us</h2>
-    <p>Email us:</p>
     <ul>
       <li>abdallah.1523024@stemoctober2.moe.edu.eg</li>
       <li>abdelrahman.2223035@stemoctober2.moe.edu.eg</li>
@@ -167,6 +163,27 @@
     </ul>
   </section>
 
-  <script src="script.js"></script>
+</div>
+
+<script>
+  const pages = document.querySelectorAll('.page');
+  const links = document.querySelectorAll('nav a');
+
+  function showPage(id) {
+    pages.forEach(p => p.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+  }
+
+  links.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = link.getAttribute('href').substring(1);
+      showPage(target);
+    });
+  });
+
+  showPage('intro');
+</script>
+
 </body>
 </html>
